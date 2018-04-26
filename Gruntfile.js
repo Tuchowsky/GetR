@@ -89,7 +89,8 @@ module.exports = function(grunt){
     grunt.registerTask('build', [
         'sass',
         'mustache_render',
-        'copy'
+        'copy',
+        'babel'
     ]);
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-mustache-render');
