@@ -1,0 +1,251 @@
+$header-color: #ffffff
+$header-vertical-line-color: #efefef
+$header-font-color: #7c7c7c
+$highlight-hover-color: #ff801a
+
+$day-font-color: #adbb0c
+
+$meal-plan-column-color: #fff  
+$meal-plan-font-color: #828282
+$guild-free-font-color: #c2c2c2   
+$hover-column-color: #828282   
+
+$shadow-color: #000
+$border-color: #dbdbdb
+$recent-day-border-color: #ff801a
+
+$week-navigation-border-color: #c0c0c0
+
+$background: green
+$section-background-color: #f9f9f9
+
+$button-font-color: #a4a4a4
+
+$dot-color: #b2c200
+
+$container-width: 978px    
+$logo-width: 118px
+$nav-width: 884px
+
+
+@font-face
+    font-family: 'HelveticaNeueLTStd'
+    src: url("../styles/fonts/HelveticaNeueLTStd-Bd.woff") format("woff"),  url("../styles/fonts/HelveticaNeueLTStd-Bd.ttf")  format("truetype")
+    font-weight: bold
+
+@font-face
+    font-family: 'HelveticaNeueLTStd'
+    src: url("../styles/fonts/HelveticaNeueLTStd-Lt.woff") format("woff"),  url("../styles/HelveticaNeueLTStd-Lt.ttf")  format("truetype")
+    font-weight: ligth
+
+
+*
+    margin: 0
+    padding: 0
+
+p
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'HelveticaNeueLTStd', sans-serif
+    background-color: $section-background-color
+
+html, body
+    -ms-overflow-style: none
+    overflow: auto
+
+header
+    height: 79px
+    background-color: $header-color
+    -webkit-box-shadow: 0px 1px 1px 0px rgba($shadow-color, 0.13)
+    -moz-box-shadow: 0px 1px 1px 0px rgba($shadow-color, 0.13)
+    box-shadow: 0px 1px 1px 0px rgba($shadow-color, 0.13)
+
+//help classes
+.center
+    display: flex
+    align-items: center
+    justify-content: center
+
+.horizontal-center
+    display: flex
+    justify-content: center
+
+.vertical-center
+    display: flex
+    align-items: center
+
+.border-bn
+    border-bottom: 2px solid $border-color
+
+.border-rt
+    border-right: 2px solid $border-color
+
+//styling
+#header
+    display: flex
+    height: 100%
+    font-size: 14px
+
+.main-width
+    width: $container-width
+
+.max-main-width
+    max-width: $container-width
+
+.header-container
+    display: flex
+    flex-direction: row
+    padding: 0
+
+.logo
+    width: $logo-width
+    height: 100%
+    border-right: 1px solid $header-vertical-line-color
+
+.nav
+    display: flex
+    justify-content: space-between
+    width: $nav-width
+    height: 100%
+
+.list
+    list-style: none
+    display: flex
+    align-items: center
+    margin: 0
+    height: 100%
+    
+.menu-item
+    letter-spacing: .6px
+    display: inline-block
+    text-transform: uppercase
+    font-weight: bold
+    box-sizing: border-box
+    margin-left: 30px
+
+.menu-item:last-child
+    margin-right: 30px
+
+li > a
+    transition: all 450ms ease-in-out
+    -webtkit-trasition: all 450ms ease-in-out
+    position: relative
+    box-sizing: border-box
+    padding-bottom: 10px
+    color: $header-font-color
+
+li > a:hover
+    color: $highlight-hover-color
+    text-decoration: none
+
+.menu > li > a:before
+    content: ""
+    position: absolute
+    width: 0
+    height: 2px
+    bottom: 0
+    left: 50%
+    background-color: $highlight-hover-color
+    visibility: hidden
+    transform: translate(-50%, 0)
+    -webkit-transition: all 0.3s ease-in-out 0s
+    transition: all 0.3s ease-in-out 0s
+
+.menu > li > a:hover:before
+    visibility: visible
+    width: 25px
+
+.loggedin-user
+    display: flex
+    justify-self: center
+    transition: all 0.5s ease
+
+.user-info
+    font-weight: light
+    letter-spacing: 1px
+
+.user-info-link
+    box-sizing: border-box
+    padding: 10px
+
+.user-photo
+    width: 32px
+    height: 32px
+    border-radius: 50%
+     -webkit-box-shadow: 0px 1px 1px 0px rgba($shadow-color, 0.32)
+     -moz-box-shadow: 0px 1px 1px 0px rgba($shadow-color, 0.32)
+    box-shadow: 0px 1px 1px 0px rgba($shadow-color, 0.32)
+
+.dropdown
+    display: flex
+    align-items: center  
+    height: 100%
+    box-sizing: border-box
+
+.hamburger
+    display: none
+    justify-self: flex
+    align-self: center
+    width: 20px
+    height: auto
+
+.scale-button
+    transform: scale(1.1)
+
+.scroll-nav
+    transition: .45s
+    position: absolute
+    top: 44%
+    height: 50px
+    width: 26px
+    border-radius: 0 50px 50px 0
+    background-color: rgba($day-font-color, .98)
+    border: 2px solid rgba($day-font-color, .5)
+    border-left: 0px
+
+.meal-plan-container > .scroll-nav-left
+    left: 85px
+
+.meal-plan-container > .scroll-nav-right
+    right: 0
+    border-radius: 50px 0 0 50px
+    border-right: 0px
+
+.scroll-nav-left > span
+    margin-left: -7px
+
+.scroll-nav-right > span
+    transform: rotate(180deg)
+    margin-left: 0
+    margin-right: -7px
+    
+.svg
+    transition: 1s ease
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 5
+    height: 100%
+    width: 100%
+    background-color: white
+   
+.svg-logo
+    height: 90%
+    width: 90%
+
+.fade-out
+    opacity: 0
+
+.welcome
+    height: 80%
+    width: 100%
+  
+    
+@import "src/styles/meal-navitation.sass"
+@import "src/styles/meal-plan.sass"
+@import "src/styles/bottom-boxes.sass"
+@import "src/styles/media-queries.sass"
+

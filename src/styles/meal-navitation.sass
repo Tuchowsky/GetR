@@ -1,0 +1,149 @@
+//help classes
+.vegetarian
+    background-image: url("../gfx/icons/meal-icons/vegetarian-meal.png")
+    background-size: auto
+    background-repeat: no-repeat
+    background-position: right
+.cheese
+    background-image: url("../gfx/icons/meal-icons/cheese-meal.png")
+    background-size: auto
+    background-repeat: no-repeat
+    background-position: right
+
+.meat
+    background-image: url("../gfx/icons/meal-icons/meat-meal.png")
+    background-size: auto
+    background-repeat: no-repeat
+    background-position: right
+.fish
+    background-image: url("../gfx/icons/meal-icons/no-fish-meal.png")
+    background-size: auto
+    background-repeat: no-repeat
+    background-position: right
+
+.chicken
+    background-image: url("../gfx/icons/meal-icons/no-chicken-meal.png")
+    background-size: auto
+    background-repeat: no-repeat
+    background-position: right
+    
+#meal-plan-nav
+    min-height: 110px
+
+#meal-plan-nav > div
+    height: 110px
+    padding: 0
+
+.week-navigation
+    margin-left: 15px
+    transition: all .45s
+    height: 44px
+    width: 26px
+    border-radius: 4px
+    border: 1px solid $week-navigation-border-color
+
+.week-container > .week-navigation:nth-child(3)
+    margin-left: 0
+    margin-right: 15px
+
+.week-navigation:hover
+    background-color: rgba($day-font-color, 0.1)
+
+.week-navigation:hover > .nav-arrow
+    transform: scale(1.05)
+
+.week-container > .week-navigation:nth-child(3):hover > .nav-arrow
+    transform: rotate(180deg) scale(1.05)
+
+#week
+    font-size: 48px
+    color: $recent-day-border-color
+    margin: 0
+
+.nav-arrow
+    background-image: url("../gfx/icons/nav-arrow.png")
+    background-size: cover
+    background-repeat: no repeat
+    height: 16px
+    width: 9px
+
+.week-container > span:nth-child(3) > span
+    display: block
+    transform: rotate(180deg)
+
+.diet-type-container > p
+    text-transform: uppercase
+    font-size: 9px
+    letter-spacing: .6px
+    margin-bottom: 9px
+    padding-left: 7px
+    color: $border-color
+
+.diet-icon
+    display: inline-block
+    height: 29px
+    width: 32px
+    margin-right: 16px
+
+.diet-icon:last-of-type
+    margin-right: 0
+    margin-left: -3px
+
+.diet-icon:first-of-type
+    margin-right: 5px
+
+.week-progress-container
+    font-size: 9px
+    color: $border-color
+
+.week-progress-container > p
+    text-transform: uppercase
+    margin-bottom: 12px
+    letter-spacing: .6px
+
+.line
+    height: 2px
+
+.progress-bar
+    display: inline-block
+    width: 10px
+    background-color: $dot-color
+    transition: .5s
+
+.progress-bar:nth-child(1)
+    margin-left: 2px
+
+.week-progress-number
+    margin-top: 3px
+    display: block
+
+.week-progress-number > p
+    display: inline-block
+    width: 10px
+    text-align: center
+    margin-right: 10px
+
+.week-progress-number > p:nth-child(1)
+    margin-left: 2px
+
+.week-progress-number > p:last-child
+    margin-right: 0
+
+.dot
+    display: inline-block
+    border-radius: 50%
+    height: 10px
+    
+.recent-week-dot
+    box-sizing: border-box
+    background-color: $header-color
+    border: 2px solid $border-color
+
+.upcoming-week-dot
+    background-color: $border-color
+
+.upcoming-week-line
+    background-color: $border-color
+
+.d-border
+    transform: scale(1.3)
